@@ -1,0 +1,76 @@
+{% for tag in workspace.tags %}
+{% if tag.mine %}
+%{A1:$SCRIPTPATH/change_to_tag {{workspace.index}} {{tag.index}}:}
+%{F#000000}%{B#799CCF}  {{tag.name}}  %{B-}%{F-}
+%{A}
+{% elsif tag.urgent %}
+%{A1:$SCRIPTPATH/change_to_tag {{workspace.index}} {{tag.index}}:}
+%{B#94A1EB}%{F#000000}  {{tag.name}}  %{F-}%{B-}
+%{A}
+{% elsif tag.visible  %}
+%{A1:$SCRIPTPATH/change_to_tag {{workspace.index}} {{tag.index}}:}
+%{F#000000}%{B#FFFFFF}  {{tag.name}}  %{B-}%{F-}
+%{A}
+{% elsif tag.busy %}
+%{A1:$SCRIPTPATH/change_to_tag {{workspace.index}} {{tag.index}}:}
+%{F#17008C}%{B#C9A7C6}  {{tag.name}}  %{B-}%{F-}
+%{A}
+{% else %}
+%{A1:$SCRIPTPATH/change_to_tag {{workspace.index}} {{tag.index}}:}
+%{F#17008C}  {{tag.name}}  %{F-}
+%{A}
+{% endif %}
+{% endfor %}
+%{c}
+{% assign poem_array = "
+“告诉我啊 真相到底是什么？”——Lapis
+next带着手上残留的温暖，向着冰冷的太阳前进。 ——Lapis
+next思绪万千欲倾诉，想要开口却无言。 ——Lapis
+next沉入世界的深处后枯萎而去。 ——Lapis
+next飞身跃上流星，品尝棉花糖云。 ——AHAREN HEART
+next皎洁月光，穿过幽径，隐匿于温柔背后的甜蜜陷阱。 ——灰色のサーガ
+next保护珍视之物的力量，相信会有一天能够获得。 ——灰色のサーガ
+next迈向新的明日，超越喜悦与绝望。快点吧，向那前方。 ——灰色のサーガ
+next无论顺风或是逆风，化作伙伴助我前进。探索不可预测的未来。 ——灰色のサーガ
+next相遇、离别，周而复始，不为人知的，只属于我的故事，镌刻在成为结局的一页中。 ——灰色のサーガ
+next雨点从天而降，一点一滴倾注大地，空灵的世界仿若无人之境。 ——リテラチュア
+next一边作出好像没有注意到满月的样子，却满心期待着明天。 ——リテラチュア
+next那是宛若在书中所见的夜晚，雨后的微凉轻拂过面庞。 ——リテラチュア
+next不坚强，嫉妒，想要就这样逃离。纵使被嘲笑有失体面，我也要跨越过去。 ——君の視界に僕の声流れるまで
+next难过的时候，悲伤的时候，群星璀璨夺目的笑脸，就预示着，明天会是个大晴天。 ——気ままな天使たち
+next我在等待着你，寻找月夜的记忆，散发香味的花儿盛开在波浪边。 ——One night
+next我想给你看呼唤着沾湿大海的雨，被装点的梦不知不觉中流落在沙中。 ——One night
+next不够成熟，靠在背上又开始找借口。掩饰焦虑，最终形成皱纹。 ——ケアレス
+next不够成熟，太过逼仄，连心情也无法估量。索性放弃，遗忘在了房间角落。 ——ケアレス
+next没有可遵循的剧本，总是失足犯错，眼前的一切突然就此结束。 ——ケアレス
+next既非幻想，亦非幻听的声音，悄悄治愈了伤痕。 ——ケアレス
+next多希望，连犯错也能笑着说我们都一样呢；添注的心愿，尽管不算可靠但只要相信就好了。 ——ケアレス
+next不再是小孩，却一事无成，想逃离这个世界。我要成为明天的你会羡慕的那种人。 ——ケアレス
+next不再是小孩，渴望看见未来，于是又忽略了现在。每当逃避之时，渴望之物都会渐行渐远。 ——ケアレス
+next藏在心底的梦，绝不会只是个梦而已，向着仔细描绘的淡淡结局一心一意前进。 ——ケアレス
+next犹豫不决，无能为力，忍不住哭泣；不愿暴露，拿袖口擦干泪水，向你纵身跃去。 ——ケアレス
+next坠落之星仅为顽石，堕落之人藏起决意，为每个愿望点燃一团烈焰。 ——ニグレド
+next天地相遇时，风暴将来袭。她在哭泣，哭泣着，你是如此美丽的红色火焰。 ——ニグレド
+next若我再次哭泣，我将如获新生，倘似川流入海，如你与我同在。 ——WHEN I CRY
+next偶尔妄想窗边，窗外的世界已经被染成红色，那么，今天的结束就是明天的开始。 ——terminal terminal
+next如同绚丽盛开的樱花一般被人人称赞，我抬头仰望，也想成为这样的存在。 ——余白のほんね
+next我想在你身边守护你的世界，一同期待着这纯真的未来。 ——余白のほんね
+next温暖的记忆却内藏空虚，放手后才想起真谛，竟是如此耀眼以至于无法想象。 ——余白のほんね
+next究竟什么才是真实，追寻着那最值得相信的世界，来到了你的银色庭院。 ——君の銀の庭
+next你察觉到了吗？真实永远都只存在于过去。未来和希望全部，都只是某个人所描绘的遥远庭院。 ——君の銀の庭
+next总有一天我身边将空无一物，在这之前 ，得先找到我们的未来吧。 ——オルゴール
+" | split: "next" %}
+{% assign UTC_8 = "now" | date: "%H" | plus: 8  | modulo: 24 %} 
+{% comment %} 这是注释，语言是Liquid，上面那一行是用来矫正东八区的 {% endcomment %}
+{% assign bedtime = UTC_8 | plus: 2  | modulo: 24 %}
+{% if bedtime >= 8 %}
+{% assign one_to_seven = "now" | date: "%M" | modulo: 7 | plus: 1 %}  
+{% assign group = "now" | date: "%S" | modulo: 5 %} 
+{% assign order = group | times: 7 | plus: one_to_seven %}
+%{F#1969E2}  {{window_title| truncatewords: 1,""| replace: ":", " "}} %{F-}
+{% if window_title == '' %}
+{{ poem_array[order] }}
+{% endif %}
+{% else %}
+%{B#FFEC66}%{F#000000}我是“提醒睡觉小助手”，现在已经是%{F-}%{F#FF0028}{% if bedtime >= 2 %}凌晨{% else %}深夜{% endif %} {{UTC_8}}点%{F-}，%{B#FFEC66}%{F#000000}希望你可以盖好被子，及时睡觉。%{B-}%{F-}
+{% endif %}
