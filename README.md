@@ -8,7 +8,7 @@ https://github.com/leftwm/leftwm/tree/main/themes/basic_polybar
 # 我的 LeftWM 主题配置备份
 leftWM 更新太快了，我适应不了～（指的是更新之后忽然不会用了）
 
-只留下一份存档
+只留下一份存档——用的是polybar
 
 # 曾经的优点
 1. 我写的，所以配色好看（但却无法在dwm处复刻，果然我不会编程）
